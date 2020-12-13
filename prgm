@@ -83,12 +83,12 @@ AQuery['CV'] = float(splittedInput[0])
 AQuery['from'] = str(splittedInput[1])
 AQuery['to'] = str(splittedInput[3])
 if(AQuery['from'] in rate.keys() and AQuery['to'] in rate.keys()):
-if AQuery['to'] == 'usd':
-result = AQuery['CV'] / rate[AQuery['from']]['value']
-else:
-result = (AQuery['CV'] / rate[AQuery['from']] ['value'])*rate[AQuery['to']] ['value']
+  if AQuery['to'] == 'usd':
+    result = AQuery['CV'] / rate[AQuery['from']]['value']
+  else:
+    result = (AQuery['CV'] / rate[AQuery['from']] ['value'])*rate[AQuery['to']] ['value']
 
-print(rate[AQuery ['to']] ['notation'] + "%.5f " % result )
+    print(rate[AQuery ['to']] ['notation'] + "%.5f " % result )
 
 else:
-print("Please enter the correct format, example: 400 usd to inr")
+  print("Please enter the correct format, example: 400 usd to inr")
